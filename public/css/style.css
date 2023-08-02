@@ -1,0 +1,136 @@
+/* * {
+  border: 2px solid red;
+} */
+
+header {
+  border-bottom: 1px solid #ccc;
+  background: black;
+  color: white;
+}
+
+.no-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #1b89bc;
+  text-decoration: none;
+  font-size: 100%;
+}
+
+.no-button:hover {
+  color: #065b83;
+  text-decoration: underline;
+}
+
+.dollar-amount {
+  color: #056605;
+  font-weight: bold;
+  margin-left: -5px;
+}
+
+.container {
+  width: 90%;
+  margin: 5vh auto;
+  border: 2px solid #000;
+  padding: 10px;
+  border-radius: 8px;
+  background: lightblue;
+}
+
+.completed {
+  background: lightgray;
+}
+
+.tasks {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  background: white;
+}
+.task {
+  display: flex;
+  border: 2px solid #000;
+  margin: 10px auto;
+}
+
+.task h4 {
+  width: 20%;
+  padding: 5px;
+  margin: 0;
+}
+
+.task h6 {
+  width: 15%;
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+}
+
+.delete {
+  width: 5%;
+  background: black;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-size: 200%;
+  font-weight: 900;
+  border-left: 5px solid white;
+}
+
+.task textarea {
+  width: 60%;
+  padding: 5px;
+}
+
+.task button {
+  width: 20%;
+}
+
+.create-div {
+  margin-top: 40px;
+}
+
+.create-form {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  border: 2px solid #000;
+  border-radius: 8px;
+  padding: 20px;
+  justify-content: space-around;
+  background: white;
+}
+
+.new-task {
+  width: 20%;
+  border: 2px solid black;
+  padding: 5px;
+}
+
+.new-description {
+  width: 60%;
+  border: 2px solid black;
+  padding: 5px;
+}
+  
+  .new-task-btn {
+    width: 20%;
+    border: 2px solid black;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .new-task-btn button {
+    margin: auto;
+  }
+
+  .bg-gray {
+    background: lightgray;
+  }

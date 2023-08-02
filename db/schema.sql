@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS to_do_db;
+CREATE DATABASE to_do_db;

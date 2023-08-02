@@ -1,0 +1,46 @@
+<!-- Loop over each object in the tasks array -->
+<style>
+  #currentDay {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+</style>
+
+<h1 id="currentDay"></h1>
+
+{{#each tasks as |task|}}
+  {{#if task.date_completed}}
+    <div class="row mb-4 task">
+      <div class="col-md-5 bg-gray">
+        <h2>
+          <h2> {{{get_emoji}}} {{task.name}}</h2>
+        </h2>
+        <p>Created by {{task.user.name}} on {{format_date task.date_created}}</p>
+        <p>Completed on {{format_date task.date_completed}}</p>
+      </div>
+      <div class="col-md-7 bg-gray">
+        <p>
+          {{task.description}}
+        </p>
+      </div>
+    </div>
+  {{else}}
+    <div class="row mb-4 task">
+      <div class="col-md-5 bg-white">
+        <h2>
+          <h2> {{{get_emoji}}} {{task.name}}</h2>
+        </h2>
+        <p>Created by {{task.user.name}} on {{format_date task.date_created}}</p>
+      </div>
+      <div class="col-md-7 bg-white">
+        <p>
+          {{task.description}}
+        </p>
+      </div>
+    </div>
+  {{/if}}
+{{/each}}
+
+<script>
+  currentDay.innerHTML = new Date().toGMTString().slice(0,16)
+</script>

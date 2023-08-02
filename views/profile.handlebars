@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{name}}!</h2>
+  </div>
+</div>
+
+
+  {{#if tasks.length}}
+    <h3>Current Tasks:</h3>
+<div class="tasks">
+      <div>
+        {{#each tasks as |task|}}
+          <div class="task">
+              {{#if task.date_completed}}
+                <h4 class='completed'>{{task.name}}</h4>
+                <textarea class='completed'>{{task.description}}</textarea>
+                <h6 class="completed">completed on {{format_date task.date_completed}}</h6>
+                <p class="delete" onclick="deleteTask({{task.id}})">X</p>
+              {{else}}
+                <h4>{{task.name}}</h4>
+                <textarea>{{task.description}}</textarea>
+                <button class="task-list btn btn-primary" onclick="updateButtonHandler({{task.id}})">Complete</button>
+              {{/if}}
+          </div>
+        {{/each}}
+    </div>
+  {{/if}}
+
+</div>
+
+<div>
+  <div class="create-div">
+    <h3>Create a New Task:</h3>
+
+    <form class="new-task-form create-form">
+      <div class="new-task">
+        <label for="task-name">task name:</label>
+        <input class="form-input" type="text" id="task-name" name="task-name" />
+      </div>
+      <div class="new-description">
+        <label for="task-desc">description:</label>
+        <textarea class="form-input" id="task-desc" name="task-desc"></textarea>
+      </div>
+      <div class="new-task-btn">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
+
+
+</div>
+
+<script src="./js/profile.js"></script>
